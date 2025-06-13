@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn
+fastapi
+uvicorn
+streamlit
+pydantic
+pytest
+loguru

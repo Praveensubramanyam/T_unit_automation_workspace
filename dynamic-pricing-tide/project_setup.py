@@ -1,8 +1,8 @@
 import os
 
 folders = [
-    "data/raw",
-    "data/processed",
+    "data/raw/",
+    "data/processed/",
     "notebooks",
     "src/config",
     "src/data",

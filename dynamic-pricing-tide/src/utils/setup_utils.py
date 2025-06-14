@@ -74,14 +74,13 @@ def setup_custom_exceptions():
     print("Custom exceptions setup completed successfully.")
 
 def setup_key_vault_integration():
-    # key_vault_url = os.getenv("AZURE_KEY_VAULT_URL")
-    # if not key_vault_url:
-    #     raise ValueError("AZURE_KEY_VAULT_URL environment variable is not set.")
-    # credential = DefaultAzureCredential()
-    # secret_client = SecretClient(vault_url=key_vault_url, credential=credential)
+    key_vault_url = os.getenv("AZURE_KEY_VAULT_URL")
+    if not key_vault_url:
+        raise ValueError("AZURE_KEY_VAULT_URL environment variable is not set.")
+    credential = DefaultAzureCredential()
+    secret_client = SecretClient(vault_url=key_vault_url, credential=credential)
 
-    # print("Key Vault integration setup completed successfully.")
-    secret_client = None  # Placeholder for actual Key Vault client setup
+    print("Key Vault integration setup completed successfully.")
     return secret_client
 
 def setup_mlflow_tracking():

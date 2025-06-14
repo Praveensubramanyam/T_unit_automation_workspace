@@ -1,9 +1,29 @@
+# === Core ML stack ===
 numpy
 pandas
 scikit-learn
+
+# === Logging & Utilities ===
+json-log-formatter
+opencensus-ext-azure
+python-dotenv
+
+# === Azure Key Vault Integration ===
+azure-identity
+azure-keyvault-secrets
+
+# === ML Experiment Tracking ===
+mlflow
+
+# === Web Backends (Optional) ===
 fastapi
 uvicorn
-streamlit
-pydantic
-pytest
-loguru
+
+# === Dev Tools ===
+black                     # Code formatter
+flake8                    # Linter
+isort                     # Import sorter
+mypy                      # Static type checker
+pytest                    # Testing framework
+pytest-cov                # Test coverage
+ipython                   # Rich Python shell for debugging

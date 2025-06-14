@@ -6,6 +6,19 @@ __pycache__/
 # C extensions
 *.so
 
+# Database
+*.db
+# SQLite database files
+*.sqlite
+*.sqlite3
+# Backup files
+*.bak
+# Python egg files
+*.egg
+
+# mlflow
+mlruns/
+
 # Distribution / packaging
 .Python
 build/

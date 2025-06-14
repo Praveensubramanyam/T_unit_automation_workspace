@@ -34,7 +34,7 @@ def setup_project_structure():
 
     print("Project structure initialized successfully.")
     
-def setup_logging():
+def setup_logging(azure_instrumentation_key=None):
     logger = logging.getLogger("dynamic_pricing_tide")
     logger.setLevel(logging.DEBUG)
 
@@ -43,13 +43,13 @@ def setup_logging():
     file_handler = logging.FileHandler("app.log")
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
-    
-    if os.getenv("AZURE_LOG_WORKSPACE_ID") and os.getenv("AZURE_LOG_SHARED_KEY"):
+
+    if azure_instrumentation_key:
         azure_handler = AzureLogHandler(
-            connection_string=f"InstrumentationKey={os.getenv('AZURE_LOG_INSTRUMENTATION_KEY')}"
+            connection_string=f'InstrumentationKey={azure_instrumentation_key}'
         )
-        azure_handler.setFormatter(formatter)
-        logger.addHandler(azure_handler)
+    azure_handler.setFormatter(formatter)
+    logger.addHandler(azure_handler)
 
     logger.info("✅ Logging setup completed.")
     print("✅ Logging setup completed successfully.")

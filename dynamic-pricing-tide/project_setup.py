@@ -1,26 +1,25 @@
-import os
+import sys
+from pathlib import Path
 
-folders = [
-    "data/raw/",
-    "data/processed/",
-    "notebooks",
-    "src/config",
-    "src/data",
-    "src/features",
-    "src/models",
-    "src/monitor",
-    "src/utils",
-    "api/routers",
-    "frontend",
-    ".github/workflows",
-    "tests"
-]
+# Add 'src' directory to sys.path
+sys.path.append(str(Path(__file__).resolve().parent / "src"))
 
-def create_folders():
-    for folder in folders:
-        os.makedirs(folder, exist_ok=True)
-        print(f"Created directory: {folder}")
+from utils.setup_utils import (
+    setup_project_structure,
+    setup_logging,
+    setup_custom_exceptions,
+    setup_key_vault_integration,
+    setup_mlflow_tracking
+)
+def main():
+    print("Initializing Tide Dynamic Pricing project setup...\n")
+    setup_project_structure()
+    setup_logging()
+    setup_custom_exceptions()
+    secret_client = setup_key_vault_integration()
+    setup_mlflow_tracking()
 
+    print("\n✅ Project setup complete.")
+    
 if __name__ == "__main__":
-    create_folders()
-    print("Folder structure initialized successfully.")
+    main()

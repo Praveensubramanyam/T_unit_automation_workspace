@@ -1,0 +1,39 @@
+name: Deploy to Azure ML Studio
+
+on:
+  push:
+    branches: [main, prod]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Azure ML CLI
+        run: |
+          pip install azure-ai-ml azure-identity
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Submit Azure ML Job
+        env:
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
+          AZURE_ML_WORKSPACE: ${{ secrets.AZURE_ML_WORKSPACE }}
+          BLOB_CONNECTION_STRING: ${{ secrets.BLOB_CONNECTION_STRING }}
+        run: |
+          az account set --subscription $AZURE_SUBSCRIPTION_ID
+          az configure --defaults group=$AZURE_RESOURCE_GROUP workspace=$AZURE_ML_WORKSPACE
+          az ml job create --file jobs/dynamic_pricing_job.yml\ 
+          --set environment_variables.BLOB_CONNECTION_STRING=$BLOB_CONNECTION_STRING

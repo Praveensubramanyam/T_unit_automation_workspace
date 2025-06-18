@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/latest/environment.schema.json
+name: dynamic-pricing-env
+version: 2
+description: Environment for dynamic pricing model training and inference
+conda_file: conda/env.yml
+image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04

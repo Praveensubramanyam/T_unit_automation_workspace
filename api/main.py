@@ -1,6 +1,7 @@
 import json
 import os
 import ssl
+from turtle import st
 import urllib
 from datetime import datetime
 from typing import List
@@ -12,13 +13,20 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+from src.utils.utils import get_secret_from_keyvault
+
+
 context = ssl._create_unverified_context()
 
-# Load env vars
-load_dotenv()
+# Load environment variables
+vault_url = os.getenv("KEYVAULT_URL")
+if not vault_url:
+    st.error("Key Vault URL not found.")
+    st.stop()
 
-TABLE_CONNECTION_STRING = os.getenv("BLOB_CONNECTION_STRING")
-TABLE_NAME = os.getenv("TABLE_NAME", "businessInsights")
+load_dotenv()
+TABLE_CONNECTION_STRING = get_secret_from_keyvault(vault_url,"TABLE-CONNECTION-STRING")
+TABLE_NAME = get_secret_from_keyvault(vault_url,"TABLE-NAME")
 
 service = TableServiceClient.from_connection_string(TABLE_CONNECTION_STRING)
 table_client = service.get_table_client(table_name=TABLE_NAME)
@@ -174,11 +182,11 @@ def predict_price(input_data: PredictionInput):
     try:
         model_input = compute_features(input_data)
 
-        url = "https://t-unit-workspace-wvobj.centralindia.inference.ml.azure.com/score"
+        url = get_secret_from_keyvault(vault_url,"MODEL-ENDPOINT")
 
         body = str.encode(json.dumps(model_input))
 
-        api_key = "4TcySwrfYZuDUlyRnWTU6jKqSdHmmWmMooPFsmJwe7it7xFJlt4gJQQJ99BFAAAAAAAAAAAAINFRAZML1xT9"
+        api_key = get_secret_from_keyvault(vault_url,"API-KEY")
         if not api_key:
             raise Exception("A key should be provided to invoke the endpoint")
 

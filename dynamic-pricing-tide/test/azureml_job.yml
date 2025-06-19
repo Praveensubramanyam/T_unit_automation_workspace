@@ -1,0 +1,11 @@
+code: .
+command: >
+  python train.py
+environment: azureml:pricing-env:5
+compute: azureml:t-unit
+inputs:
+  cleaned_data:
+    type: uri_folder
+    mode: ro_mount
+    path: azureml:cleaned_data:1
+experiment_name: pricing_model_experiment

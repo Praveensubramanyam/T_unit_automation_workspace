@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">test_report.html</title>
+      <link href="assets/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 id="title">test_report.html</h1>
+    <p>Report generated on 19-Jun-2025 at 11:26:20 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.1.1</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">30 tests took 00:08:58.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" disabled/>
+            <span class="failed">0 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">30 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled/>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.10&#34;, &#34;Platform&#34;: &#34;Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.4.0&#34;, &#34;pluggy&#34;: &#34;1.6.0&#34;}, &#34;Plugins&#34;: {&#34;cov&#34;: &#34;6.2.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;, &#34;anyio&#34;: &#34;4.9.0&#34;, &#34;html&#34;: &#34;4.1.1&#34;}}, &#34;tests&#34;: {&#34;tests/test_dynamic_pricing_pipeline.py::test_load_and_preprocess_data&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_load_and_preprocess_data&#34;, &#34;duration&#34;: &#34;32 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_load_and_preprocess_data&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;32 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nLoaded data with shape: (100, 9)\n\nData Quality Summary:\nMissing values per column:\nDate             0\nMRP_x            0\nBrand            0\nFC_ID            0\nSellingPrice     0\nDemand           0\nStockStart       0\nIsMetro          0\nLeadTimeFloat    0\ndtype: int64\n\nData types:\nDate             datetime64[ns]\nMRP_x                   float64\nBrand                    object\nFC_ID                    object\nSellingPrice            float64\nDemand                    int64\nStockStart                int64\nIsMetro                   int64\nLeadTimeFloat           float64\ndtype: object\n&#34;}], &#34;tests/test_dynamic_pricing_pipeline.py::test_run_feature_engineering&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_run_feature_engineering&#34;, &#34;duration&#34;: &#34;490 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_run_feature_engineering&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;490 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n==================================================\nLEAKAGE-FREE FEATURE ENGINEERING PHASE\n==================================================\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (100, 41)\n\u2713 Categorical features encoded. Shape: (100, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (100, 19)\n\u2713 Target shape: (100,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n\n============================================================\nFEATURE ENGINEERING SUMMARY\n============================================================\nOriginal dataset shape: (100, 9)\nProcessed dataset shape: (100, 43)\nFinal feature matrix shape: (100, 19)\nTarget vector shape: (100,)\nTotal features created: 19\nTarget column: SellingPrice\n\u2713 No data leakage - all features available before pricing decisions\n\u2713 Ready for model training!\n\nFeature Categories:\n  - Product characteristics: 10\n  - Temporal patterns: 8\n  - Market/Location: 1\n  - Historical patterns: 2\n&#34;}], &#34;tests/test_dynamic_pricing_pipeline.py::test_run_time_series_analysis&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_run_time_series_analysis&#34;, &#34;duration&#34;: &#34;15 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_run_time_series_analysis&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;15 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n==================================================\nTIME SERIES ANALYSIS PHASE\n==================================================\n\u2713 Price decomposition completed\n\u26a0\ufe0f  UnitsSold column not found. Skipping demand decomposition.\n\u2713 Price seasonality strength: 3.5932841252946774\n\u26a0\ufe0f  Demand forecasting failed: &amp;#x27;UnitsSold&amp;#x27;\n\u2713 Time series analysis completed (additional temporal features already in feature engineering)\n&#34;}], &#34;tests/test_dynamic_pricing_pipeline.py::test_prepare_model_data&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_prepare_model_data&#34;, &#34;duration&#34;: &#34;73 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_prepare_model_data&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;73 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n==================================================\nLEAKAGE-FREE FEATURE ENGINEERING PHASE\n==================================================\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (100, 41)\n\u2713 Categorical features encoded. Shape: (100, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (100, 19)\n\u2713 Target shape: (100,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n\n============================================================\nFEATURE ENGINEERING SUMMARY\n============================================================\nOriginal dataset shape: (100, 9)\nProcessed dataset shape: (100, 43)\nFinal feature matrix shape: (100, 19)\nTarget vector shape: (100,)\nTotal features created: 19\nTarget column: SellingPrice\n\u2713 No data leakage - all features available before pricing decisions\n\u2713 Ready for model training!\n\nFeature Categories:\n  - Product characteristics: 10\n  - Temporal patterns: 8\n  - Market/Location: 1\n  - Historical patterns: 2\n\n==================================================\nDATA PREPARATION FOR ML\n==================================================\n\u2713 Training set: (64, 19)\n\u2713 Validation set: (16, 19)\n\u2713 Test set: (20, 19)\n\u2713 Features: 19\n\u2713 All features are leakage-free\n\u2713 Training set info:\n&amp;lt;class &amp;#x27;pandas.core.frame.DataFrame&amp;#x27;&amp;gt;\nRangeIndex: 64 entries, 0 to 63\nData columns (total 19 columns):\n #   Column                              Non-Null Count  Dtype  \n---  ------                              --------------  -----  \n 0   Log_MRP                             64 non-null     float64\n 1   MRP_Category                        64 non-null     float64\n 2   MRP_vs_Brand_Median                 64 non-null     float64\n 3   Is_Premium_Brand                    64 non-null     float64\n 4   Product_Age_Days                    64 non-null     float64\n 5   IsMetroMarket                       64 non-null     float64\n 6   Brand_encoded                       64 non-null     float64\n 7   Is_Peak_Season                      64 non-null     float64\n 8   Is_Summer                           64 non-null     float64\n 9   IsWeekend                           64 non-null     float64\n 10  Is_Mid_Week                         64 non-null     float64\n 11  Month                               64 non-null     float64\n 12  DayOfWeek                           64 non-null     float64\n 13  Is_New_Product                      64 non-null     float64\n 14  Is_Mature_Product                   64 non-null     float64\n 15  Lead_Time_Days                      64 non-null     float64\n 16  Initial_Stock_Level                 64 non-null     float64\n 17  Historical_Demand_Mean_Brand_FC_ID  64 non-null     float64\n 18  Historical_Stock_Mean_Brand_FC_ID   64 non-null     float64\ndtypes: float64(19)\nmemory usage: 9.6 KB\n&#34;}], &#34;tests/test_dynamic_pricing_pipeline.py::test_run_ml_experiments&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_run_ml_experiments&#34;, &#34;duration&#34;: &#34;00:02:11&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_run_ml_experiments&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:02:11&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n==================================================\nLEAKAGE-FREE FEATURE ENGINEERING PHASE\n==================================================\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (100, 41)\n\u2713 Categorical features encoded. Shape: (100, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (100, 19)\n\u2713 Target shape: (100,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n\n============================================================\nFEATURE ENGINEERING SUMMARY\n============================================================\nOriginal dataset shape: (100, 9)\nProcessed dataset shape: (100, 43)\nFinal feature matrix shape: (100, 19)\nTarget vector shape: (100,)\nTotal features created: 19\nTarget column: SellingPrice\n\u2713 No data leakage - all features available before pricing decisions\n\u2713 Ready for model training!\n\nFeature Categories:\n  - Product characteristics: 10\n  - Temporal patterns: 8\n  - Market/Location: 1\n  - Historical patterns: 2\n\n==================================================\nDATA PREPARATION FOR ML\n==================================================\n\u2713 Training set: (64, 19)\n\u2713 Validation set: (16, 19)\n\u2713 Test set: (20, 19)\n\u2713 Features: 19\n\u2713 All features are leakage-free\n\u2713 Training set info:\n&amp;lt;class &amp;#x27;pandas.core.frame.DataFrame&amp;#x27;&amp;gt;\nRangeIndex: 64 entries, 0 to 63\nData columns (total 19 columns):\n #   Column                              Non-Null Count  Dtype  \n---  ------                              --------------  -----  \n 0   Log_MRP                             64 non-null     float64\n 1   MRP_Category                        64 non-null     float64\n 2   MRP_vs_Brand_Median                 64 non-null     float64\n 3   Is_Premium_Brand                    64 non-null     float64\n 4   Product_Age_Days                    64 non-null     float64\n 5   IsMetroMarket                       64 non-null     float64\n 6   Brand_encoded                       64 non-null     float64\n 7   Is_Peak_Season                      64 non-null     float64\n 8   Is_Summer                           64 non-null     float64\n 9   IsWeekend                           64 non-null     float64\n 10  Is_Mid_Week                         64 non-null     float64\n 11  Month                               64 non-null     float64\n 12  DayOfWeek                           64 non-null     float64\n 13  Is_New_Product                      64 non-null     float64\n 14  Is_Mature_Product                   64 non-null     float64\n 15  Lead_Time_Days                      64 non-null     float64\n 16  Initial_Stock_Level                 64 non-null     float64\n 17  Historical_Demand_Mean_Brand_FC_ID  64 non-null     float64\n 18  Historical_Stock_Mean_Brand_FC_ID   64 non-null     float64\ndtypes: float64(19)\nmemory usage: 9.6 KB\n\n==================================================\nML EXPERIMENTATION PHASE\n==================================================\n\ud83d\ude80 Starting model training with hyperparameter optimization...\nTuning hyperparameters for xgboost...\nTuning hyperparameters for lightgbm...\nTuning hyperparameters for random_forest...\n\u2713 Model training completed\n\n\ud83d\udcca MODEL EVALUATION RESULTS:\n--------------------------------------------------\n\n\ud83d\udd0d Evaluating random_forest...\n  \ud83d\udcc8 Validation MAPE: 0.265\n  \ud83d\udcc8 Test MAPE: 0.230\n  \ud83d\udcc8 Test R\u00b2: -0.064\n  \ud83d\udcc8 Test RMSE: 32.93831826230619\n\u2713 Successfully logged random_forest model using specific flavor\n\n\ud83d\udd0d Evaluating xgboost...\n  \ud83d\udcc8 Validation MAPE: 0.284\n  \ud83d\udcc8 Test MAPE: 0.221\n  \ud83d\udcc8 Test R\u00b2: -0.116\n  \ud83d\udcc8 Test RMSE: 33.72612861665523\n\u2713 Successfully logged xgboost model using specific flavor\n\n\ud83d\udd0d Evaluating lightgbm...\n  \ud83d\udcc8 Validation MAPE: 0.259\n  \ud83d\udcc8 Test MAPE: 0.246\n  \ud83d\udcc8 Test R\u00b2: -0.231\n  \ud83d\udcc8 Test RMSE: 35.41600064900996\n\u2713 Successfully logged lightgbm model using specific flavor\n\n\ud83c\udfc6 BEST MODEL: xgboost\n\ud83c\udfaf Best Test MAPE: 0.221\n\n----------------------------- Captured stderr call -----------------------------\n[I 2025-06-19 11:17:23,688] A new study created in memory with name: no-name-2e2c88c3-9ae2-4b1b-a8e3-ea1c5542263c\n[I 2025-06-19 11:18:24,255] Trial 0 finished with value: 0.28510991451561457 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 226, &amp;#x27;max_depth&amp;#x27;: 8, &amp;#x27;learning_rate&amp;#x27;: 0.11669832827748702, &amp;#x27;subsample&amp;#x27;: 0.9016920584567615, &amp;#x27;colsample_bytree&amp;#x27;: 0.8308727623823418}. Best is trial 0 with value: 0.28510991451561457.\n[I 2025-06-19 11:19:22,640] A new study created in memory with name: no-name-9d116a98-f29c-4105-bd61-ed08eea32e9d\n[I 2025-06-19 11:19:22,714] Trial 0 finished with value: 0.2554768542592259 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 109, &amp;#x27;max_depth&amp;#x27;: 10, &amp;#x27;learning_rate&amp;#x27;: 0.2974185313282311, &amp;#x27;num_leaves&amp;#x27;: 80, &amp;#x27;feature_fraction&amp;#x27;: 0.9300753757842133}. Best is trial 0 with value: 0.2554768542592259.\n[I 2025-06-19 11:19:22,727] A new study created in memory with name: no-name-ca7817ea-7d11-4ff1-9049-281d4cf00f93\n[I 2025-06-19 11:19:22,815] Trial 0 finished with value: 0.2616118906618761 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 66, &amp;#x27;max_depth&amp;#x27;: 16, &amp;#x27;min_samples_split&amp;#x27;: 8, &amp;#x27;min_samples_leaf&amp;#x27;: 4}. Best is trial 0 with value: 0.2616118906618761.\n2025/06/19 11:19:22 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:19:26 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;random_forest_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;25&amp;#x27; of model &amp;#x27;random_forest_dynamic_pricing&amp;#x27;.\n2025/06/19 11:19:26 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:19:29 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;xgboost_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;25&amp;#x27; of model &amp;#x27;xgboost_dynamic_pricing&amp;#x27;.\n2025/06/19 11:19:30 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:19:33 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;25&amp;#x27; of model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27;.\n&#34;}], &#34;tests/test_dynamic_pricing_pipeline.py::test_generate_business_insights&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_generate_business_insights&#34;, &#34;duration&#34;: &#34;00:02:15&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_generate_business_insights&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:02:15&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n==================================================\nLEAKAGE-FREE FEATURE ENGINEERING PHASE\n==================================================\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (100, 41)\n\u2713 Categorical features encoded. Shape: (100, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (100, 19)\n\u2713 Target shape: (100,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n\n============================================================\nFEATURE ENGINEERING SUMMARY\n============================================================\nOriginal dataset shape: (100, 9)\nProcessed dataset shape: (100, 43)\nFinal feature matrix shape: (100, 19)\nTarget vector shape: (100,)\nTotal features created: 19\nTarget column: SellingPrice\n\u2713 No data leakage - all features available before pricing decisions\n\u2713 Ready for model training!\n\nFeature Categories:\n  - Product characteristics: 10\n  - Temporal patterns: 8\n  - Market/Location: 1\n  - Historical patterns: 2\n\n==================================================\nDATA PREPARATION FOR ML\n==================================================\n\u2713 Training set: (64, 19)\n\u2713 Validation set: (16, 19)\n\u2713 Test set: (20, 19)\n\u2713 Features: 19\n\u2713 All features are leakage-free\n\u2713 Training set info:\n&amp;lt;class &amp;#x27;pandas.core.frame.DataFrame&amp;#x27;&amp;gt;\nRangeIndex: 64 entries, 0 to 63\nData columns (total 19 columns):\n #   Column                              Non-Null Count  Dtype  \n---  ------                              --------------  -----  \n 0   Log_MRP                             64 non-null     float64\n 1   MRP_Category                        64 non-null     float64\n 2   MRP_vs_Brand_Median                 64 non-null     float64\n 3   Is_Premium_Brand                    64 non-null     float64\n 4   Product_Age_Days                    64 non-null     float64\n 5   IsMetroMarket                       64 non-null     float64\n 6   Brand_encoded                       64 non-null     float64\n 7   Is_Peak_Season                      64 non-null     float64\n 8   Is_Summer                           64 non-null     float64\n 9   IsWeekend                           64 non-null     float64\n 10  Is_Mid_Week                         64 non-null     float64\n 11  Month                               64 non-null     float64\n 12  DayOfWeek                           64 non-null     float64\n 13  Is_New_Product                      64 non-null     float64\n 14  Is_Mature_Product                   64 non-null     float64\n 15  Lead_Time_Days                      64 non-null     float64\n 16  Initial_Stock_Level                 64 non-null     float64\n 17  Historical_Demand_Mean_Brand_FC_ID  64 non-null     float64\n 18  Historical_Stock_Mean_Brand_FC_ID   64 non-null     float64\ndtypes: float64(19)\nmemory usage: 9.6 KB\n\n==================================================\nML EXPERIMENTATION PHASE\n==================================================\n\ud83d\ude80 Starting model training with hyperparameter optimization...\nTuning hyperparameters for xgboost...\nTuning hyperparameters for lightgbm...\nTuning hyperparameters for random_forest...\n\u2713 Model training completed\n\n\ud83d\udcca MODEL EVALUATION RESULTS:\n--------------------------------------------------\n\n\ud83d\udd0d Evaluating random_forest...\n  \ud83d\udcc8 Validation MAPE: 0.202\n  \ud83d\udcc8 Test MAPE: 0.164\n  \ud83d\udcc8 Test R\u00b2: -0.103\n  \ud83d\udcc8 Test RMSE: 26.563983634525393\n\u2713 Successfully logged random_forest model using specific flavor\n\n\ud83d\udd0d Evaluating xgboost...\n  \ud83d\udcc8 Validation MAPE: 0.192\n  \ud83d\udcc8 Test MAPE: 0.153\n  \ud83d\udcc8 Test R\u00b2: -0.110\n  \ud83d\udcc8 Test RMSE: 26.645737004521063\n\u2713 Successfully logged xgboost model using specific flavor\n\n\ud83d\udd0d Evaluating lightgbm...\n  \ud83d\udcc8 Validation MAPE: 0.212\n  \ud83d\udcc8 Test MAPE: 0.152\n  \ud83d\udcc8 Test R\u00b2: -0.146\n  \ud83d\udcc8 Test RMSE: 27.072309035604757\n\u2713 Successfully logged lightgbm model using specific flavor\n\n\ud83c\udfc6 BEST MODEL: lightgbm\n\ud83c\udfaf Best Test MAPE: 0.152\n\n==================================================\nBUSINESS INSIGHTS GENERATION\n==================================================\n\u2713 Generated 20 price predictions using xgboost\n\n\ud83d\udcbc BUSINESS IMPACT SUMMARY:\n----------------------------------------\n\n\ud83d\udcca REVENUE_IMPACT:\n  \u2022 actual_revenue: 28841.235\n  \u2022 predicted_revenue: 28183.413\n  \u2022 revenue_impact_pct: -2.281\n\n\ud83d\udcca ACCURACY_METRICS:\n  \u2022 MAE: 21.134\n  \u2022 MSE: 732.910\n  \u2022 RMSE: 27.072\n  \u2022 MAPE: 0.152\n  \u2022 R2: -0.146\n  \u2022 Directional_Accuracy: 52.632\n\n\ud83d\udcca SUMMARY:\n  \u2022 Total_Transactions: 20.000\n  \u2022 Total_Units_Sold: 206\n  \u2022 Average_Price_Actual: 139.861\n  \u2022 Average_Price_Predicted: 136.188\n  \u2022 Price_Prediction_Bias: -3.672\n\n\ud83d\udd0d FEATURE IMPORTANCE ANALYSIS:\n----------------------------------------\n\ud83d\udcc8 TOP 10 MOST IMPORTANT FEATURES:\n  63.0000 - Initial_Stock_Level\n  45.0000 - Historical_Stock_Mean_Brand_FC_ID\n  39.0000 - Historical_Demand_Mean_Brand_FC_ID\n  37.0000 - Log_MRP\n  29.0000 - Product_Age_Days\n  23.0000 - Lead_Time_Days\n  21.0000 - DayOfWeek\n  18.0000 - Is_Mid_Week\n  11.0000 - MRP_Category\n  10.0000 - IsMetroMarket\n\n\ud83c\udff7\ufe0f  KEY INSIGHTS:\n  \u2022 Product factors are important: Historical_Stock_Mean_Brand_FC_ID, Historical_Demand_Mean_Brand_FC_ID, Log_MRP, Product_Age_Days\n  \u2022 Temporal factors are important: Product_Age_Days\n  \u2022 Historical factors are important: Historical_Stock_Mean_Brand_FC_ID, Historical_Demand_Mean_Brand_FC_ID\n\ud83d\udce4 Logged business summary to Azure Table Storage.\n\n----------------------------- Captured stderr call -----------------------------\n[I 2025-06-19 11:19:34,165] A new study created in memory with name: no-name-5c44b810-53cb-47f3-ba1f-019b7e7a6601\n[I 2025-06-19 11:20:35,185] Trial 0 finished with value: 0.20231966573058047 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 259, &amp;#x27;max_depth&amp;#x27;: 10, &amp;#x27;learning_rate&amp;#x27;: 0.1715549190358176, &amp;#x27;subsample&amp;#x27;: 0.7378350699464097, &amp;#x27;colsample_bytree&amp;#x27;: 0.9201930643686105}. Best is trial 0 with value: 0.20231966573058047.\n[I 2025-06-19 11:21:39,247] A new study created in memory with name: no-name-2e4a514e-c050-4113-8ba9-62af05f0c6f4\n[I 2025-06-19 11:21:39,282] Trial 0 finished with value: 0.21226670918993207 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 249, &amp;#x27;max_depth&amp;#x27;: 3, &amp;#x27;learning_rate&amp;#x27;: 0.11817109941403446, &amp;#x27;num_leaves&amp;#x27;: 147, &amp;#x27;feature_fraction&amp;#x27;: 0.9677715876508137}. Best is trial 0 with value: 0.21226670918993207.\n[I 2025-06-19 11:21:39,298] A new study created in memory with name: no-name-5716133f-7ff1-419f-9d8b-e449a01933e9\n[I 2025-06-19 11:21:39,556] Trial 0 finished with value: 0.20222007897932165 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 268, &amp;#x27;max_depth&amp;#x27;: 9, &amp;#x27;min_samples_split&amp;#x27;: 5, &amp;#x27;min_samples_leaf&amp;#x27;: 4}. Best is trial 0 with value: 0.20222007897932165.\n2025/06/19 11:21:39 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:21:42 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;random_forest_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;26&amp;#x27; of model &amp;#x27;random_forest_dynamic_pricing&amp;#x27;.\n2025/06/19 11:21:42 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:21:45 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;xgboost_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;26&amp;#x27; of model &amp;#x27;xgboost_dynamic_pricing&amp;#x27;.\n2025/06/19 11:21:45 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:21:48 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;26&amp;#x27; of model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27;.\n&#34;}], &#34;tests/test_dynamic_pricing_pipeline.py::test_predict_prices&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_predict_prices&#34;, &#34;duration&#34;: &#34;00:00:44&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_predict_prices&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:44&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n==================================================\nLEAKAGE-FREE FEATURE ENGINEERING PHASE\n==================================================\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (100, 41)\n\u2713 Categorical features encoded. Shape: (100, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (100, 19)\n\u2713 Target shape: (100,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n\n============================================================\nFEATURE ENGINEERING SUMMARY\n============================================================\nOriginal dataset shape: (100, 9)\nProcessed dataset shape: (100, 43)\nFinal feature matrix shape: (100, 19)\nTarget vector shape: (100,)\nTotal features created: 19\nTarget column: SellingPrice\n\u2713 No data leakage - all features available before pricing decisions\n\u2713 Ready for model training!\n\nFeature Categories:\n  - Product characteristics: 10\n  - Temporal patterns: 8\n  - Market/Location: 1\n  - Historical patterns: 2\n\n==================================================\nDATA PREPARATION FOR ML\n==================================================\n\u2713 Training set: (64, 19)\n\u2713 Validation set: (16, 19)\n\u2713 Test set: (20, 19)\n\u2713 Features: 19\n\u2713 All features are leakage-free\n\u2713 Training set info:\n&amp;lt;class &amp;#x27;pandas.core.frame.DataFrame&amp;#x27;&amp;gt;\nRangeIndex: 64 entries, 0 to 63\nData columns (total 19 columns):\n #   Column                              Non-Null Count  Dtype  \n---  ------                              --------------  -----  \n 0   Log_MRP                             64 non-null     float64\n 1   MRP_Category                        64 non-null     float64\n 2   MRP_vs_Brand_Median                 64 non-null     float64\n 3   Is_Premium_Brand                    64 non-null     float64\n 4   Product_Age_Days                    64 non-null     float64\n 5   IsMetroMarket                       64 non-null     float64\n 6   Brand_encoded                       64 non-null     float64\n 7   Is_Peak_Season                      64 non-null     float64\n 8   Is_Summer                           64 non-null     float64\n 9   IsWeekend                           64 non-null     float64\n 10  Is_Mid_Week                         64 non-null     float64\n 11  Month                               64 non-null     float64\n 12  DayOfWeek                           64 non-null     float64\n 13  Is_New_Product                      64 non-null     float64\n 14  Is_Mature_Product                   64 non-null     float64\n 15  Lead_Time_Days                      64 non-null     float64\n 16  Initial_Stock_Level                 64 non-null     float64\n 17  Historical_Demand_Mean_Brand_FC_ID  64 non-null     float64\n 18  Historical_Stock_Mean_Brand_FC_ID   64 non-null     float64\ndtypes: float64(19)\nmemory usage: 9.6 KB\n\n==================================================\nML EXPERIMENTATION PHASE\n==================================================\n\ud83d\ude80 Starting model training with hyperparameter optimization...\nTuning hyperparameters for xgboost...\nTuning hyperparameters for lightgbm...\nTuning hyperparameters for random_forest...\n\u2713 Model training completed\n\n\ud83d\udcca MODEL EVALUATION RESULTS:\n--------------------------------------------------\n\n\ud83d\udd0d Evaluating random_forest...\n  \ud83d\udcc8 Validation MAPE: 0.194\n  \ud83d\udcc8 Test MAPE: 0.192\n  \ud83d\udcc8 Test R\u00b2: -0.507\n  \ud83d\udcc8 Test RMSE: 35.47073750062492\n\u2713 Successfully logged random_forest model using specific flavor\n\n\ud83d\udd0d Evaluating xgboost...\n  \ud83d\udcc8 Validation MAPE: 0.204\n  \ud83d\udcc8 Test MAPE: 0.221\n  \ud83d\udcc8 Test R\u00b2: -0.790\n  \ud83d\udcc8 Test RMSE: 38.664171885344906\n\u2713 Successfully logged xgboost model using specific flavor\n\n\ud83d\udd0d Evaluating lightgbm...\n  \ud83d\udcc8 Validation MAPE: 0.202\n  \ud83d\udcc8 Test MAPE: 0.203\n  \ud83d\udcc8 Test R\u00b2: -0.577\n  \ud83d\udcc8 Test RMSE: 36.29240741395022\n\u2713 Successfully logged lightgbm model using specific flavor\n\n\ud83c\udfc6 BEST MODEL: random_forest\n\ud83c\udfaf Best Test MAPE: 0.192\n\n\ud83d\udd2e GENERATING PRICE PREDICTIONS\n\ud83d\udcca Input data shape: (100, 9)\n\u2705 Feature engineering applied\n\ud83d\udcc8 Feature matrix shape: (100, 19)\n\ud83d\udd27 Using 19 features\n\u2705 Generated 100 price predictions\n\n----------------------------- Captured stderr call -----------------------------\n[I 2025-06-19 11:21:49,647] A new study created in memory with name: no-name-4a5d548f-54de-4bdb-bb6a-000383cf4264\n[I 2025-06-19 11:22:05,971] Trial 0 finished with value: 0.20639463921618162 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 82, &amp;#x27;max_depth&amp;#x27;: 5, &amp;#x27;learning_rate&amp;#x27;: 0.037850595527391825, &amp;#x27;subsample&amp;#x27;: 0.8720479733567418, &amp;#x27;colsample_bytree&amp;#x27;: 0.899799140461641}. Best is trial 0 with value: 0.20639463921618162.\n[I 2025-06-19 11:22:23,770] A new study created in memory with name: no-name-1660e9c0-6d10-42fd-b35b-8e02ecae70f5\n[I 2025-06-19 11:22:23,826] Trial 0 finished with value: 0.20071562264822315 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 263, &amp;#x27;max_depth&amp;#x27;: 3, &amp;#x27;learning_rate&amp;#x27;: 0.10513846881735965, &amp;#x27;num_leaves&amp;#x27;: 95, &amp;#x27;feature_fraction&amp;#x27;: 0.873876935607973}. Best is trial 0 with value: 0.20071562264822315.\n[I 2025-06-19 11:22:23,848] A new study created in memory with name: no-name-685fcb11-a1fc-4631-933c-a1809dd7c3c4\n[I 2025-06-19 11:22:23,982] Trial 0 finished with value: 0.1899266728974769 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 137, &amp;#x27;max_depth&amp;#x27;: 11, &amp;#x27;min_samples_split&amp;#x27;: 5, &amp;#x27;min_samples_leaf&amp;#x27;: 5}. Best is trial 0 with value: 0.1899266728974769.\n2025/06/19 11:22:24 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:22:26 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;random_forest_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;27&amp;#x27; of model &amp;#x27;random_forest_dynamic_pricing&amp;#x27;.\n2025/06/19 11:22:26 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:22:29 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;xgboost_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;27&amp;#x27; of model &amp;#x27;xgboost_dynamic_pricing&amp;#x27;.\n2025/06/19 11:22:30 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:22:33 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;27&amp;#x27; of model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27;.\n&#34;}], &#34;tests/test_dynamic_pricing_pipeline.py::test_run_complete_pipeline&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_dynamic_pricing_pipeline.py::test_run_complete_pipeline&#34;, &#34;duration&#34;: &#34;00:01:22&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_dynamic_pricing_pipeline.py::test_run_complete_pipeline&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:22&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\ud83d\ude80 STARTING DYNAMIC PRICING OPTIMIZATION PIPELINE\n======================================================================\n\ud83c\udfaf Objective: Build leakage-free pricing prediction model\n======================================================================\n\n\ud83d\udcc2 STEP 1: DATA LOADING\nLoaded data with shape: (100, 9)\n\nData Quality Summary:\nMissing values per column:\nDate             0\nMRP_x            0\nBrand            0\nFC_ID            0\nSellingPrice     0\nDemand           0\nStockStart       0\nIsMetro          0\nLeadTimeFloat    0\ndtype: int64\n\nData types:\nDate             datetime64[ns]\nMRP_x                   float64\nBrand                    object\nFC_ID                    object\nSellingPrice            float64\nDemand                    int64\nStockStart                int64\nIsMetro                   int64\nLeadTimeFloat           float64\ndtype: object\n\n\u2699\ufe0f  STEP 2: FEATURE ENGINEERING\n\n==================================================\nLEAKAGE-FREE FEATURE ENGINEERING PHASE\n==================================================\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (100, 41)\n\u2713 Categorical features encoded. Shape: (100, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (100, 19)\n\u2713 Target shape: (100,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n\n============================================================\nFEATURE ENGINEERING SUMMARY\n============================================================\nOriginal dataset shape: (100, 9)\nProcessed dataset shape: (100, 43)\nFinal feature matrix shape: (100, 19)\nTarget vector shape: (100,)\nTotal features created: 19\nTarget column: SellingPrice\n\u2713 No data leakage - all features available before pricing decisions\n\u2713 Ready for model training!\n\nFeature Categories:\n  - Product characteristics: 10\n  - Temporal patterns: 8\n  - Market/Location: 1\n  - Historical patterns: 2\n\n\ud83d\udcc8 STEP 3: TIME SERIES ANALYSIS\n\n==================================================\nTIME SERIES ANALYSIS PHASE\n==================================================\n\u2713 Price decomposition completed\n\u26a0\ufe0f  UnitsSold column not found. Skipping demand decomposition.\n\u2713 Price seasonality strength: 3.488873625863115\n\u26a0\ufe0f  Demand forecasting failed: &amp;#x27;UnitsSold&amp;#x27;\n\u2713 Time series analysis completed (additional temporal features already in feature engineering)\n\n\ud83d\udd27 STEP 4: ML DATA PREPARATION\n\n==================================================\nDATA PREPARATION FOR ML\n==================================================\n\u2713 Training set: (64, 19)\n\u2713 Validation set: (16, 19)\n\u2713 Test set: (20, 19)\n\u2713 Features: 19\n\u2713 All features are leakage-free\n\u2713 Training set info:\n&amp;lt;class &amp;#x27;pandas.core.frame.DataFrame&amp;#x27;&amp;gt;\nRangeIndex: 64 entries, 0 to 63\nData columns (total 19 columns):\n #   Column                              Non-Null Count  Dtype  \n---  ------                              --------------  -----  \n 0   Log_MRP                             64 non-null     float64\n 1   MRP_Category                        64 non-null     float64\n 2   MRP_vs_Brand_Median                 64 non-null     float64\n 3   Is_Premium_Brand                    64 non-null     float64\n 4   Product_Age_Days                    64 non-null     float64\n 5   IsMetroMarket                       64 non-null     float64\n 6   Brand_encoded                       64 non-null     float64\n 7   Is_Peak_Season                      64 non-null     float64\n 8   Is_Summer                           64 non-null     float64\n 9   IsWeekend                           64 non-null     float64\n 10  Is_Mid_Week                         64 non-null     float64\n 11  Month                               64 non-null     float64\n 12  DayOfWeek                           64 non-null     float64\n 13  Is_New_Product                      64 non-null     float64\n 14  Is_Mature_Product                   64 non-null     float64\n 15  Lead_Time_Days                      64 non-null     float64\n 16  Initial_Stock_Level                 64 non-null     float64\n 17  Historical_Demand_Mean_Brand_FC_ID  64 non-null     float64\n 18  Historical_Stock_Mean_Brand_FC_ID   64 non-null     float64\ndtypes: float64(19)\nmemory usage: 9.6 KB\n\n\ud83e\udd16 STEP 5: ML EXPERIMENTATION\n\n==================================================\nML EXPERIMENTATION PHASE\n==================================================\n\ud83d\ude80 Starting model training with hyperparameter optimization...\nTuning hyperparameters for xgboost...\nTuning hyperparameters for lightgbm...\nTuning hyperparameters for random_forest...\n\u2713 Model training completed\n\n\ud83d\udcca MODEL EVALUATION RESULTS:\n--------------------------------------------------\n\n\ud83d\udd0d Evaluating random_forest...\n  \ud83d\udcc8 Validation MAPE: 0.192\n  \ud83d\udcc8 Test MAPE: 0.229\n  \ud83d\udcc8 Test R\u00b2: -0.334\n  \ud83d\udcc8 Test RMSE: 34.99507239648899\n\u2713 Successfully logged random_forest model using specific flavor\n\n\ud83d\udd0d Evaluating xgboost...\n  \ud83d\udcc8 Validation MAPE: 0.215\n  \ud83d\udcc8 Test MAPE: 0.250\n  \ud83d\udcc8 Test R\u00b2: -0.766\n  \ud83d\udcc8 Test RMSE: 40.264024509217634\n\u2713 Successfully logged xgboost model using specific flavor\n\n\ud83d\udd0d Evaluating lightgbm...\n  \ud83d\udcc8 Validation MAPE: 0.221\n  \ud83d\udcc8 Test MAPE: 0.282\n  \ud83d\udcc8 Test R\u00b2: -1.186\n  \ud83d\udcc8 Test RMSE: 44.789718361748236\n\u2713 Successfully logged lightgbm model using specific flavor\n\n\ud83c\udfc6 BEST MODEL: random_forest\n\ud83c\udfaf Best Test MAPE: 0.229\n\n\ud83d\udca1 STEP 6: BUSINESS INSIGHTS\n\n==================================================\nBUSINESS INSIGHTS GENERATION\n==================================================\n\u2713 Generated 20 price predictions using random_forest\n\n\ud83d\udcbc BUSINESS IMPACT SUMMARY:\n----------------------------------------\n\n\ud83d\udcca REVENUE_IMPACT:\n  \u2022 actual_revenue: 28526.834\n  \u2022 predicted_revenue: 26326.163\n  \u2022 revenue_impact_pct: -7.714\n\n\ud83d\udcca ACCURACY_METRICS:\n  \u2022 MAE: 31.677\n  \u2022 MSE: 1224.655\n  \u2022 RMSE: 34.995\n  \u2022 MAPE: 0.229\n  \u2022 R2: -0.334\n  \u2022 Directional_Accuracy: 57.895\n\n\ud83d\udcca SUMMARY:\n  \u2022 Total_Transactions: 20.000\n  \u2022 Total_Units_Sold: 194\n  \u2022 Average_Price_Actual: 144.588\n  \u2022 Average_Price_Predicted: 134.439\n  \u2022 Price_Prediction_Bias: -10.149\n\n\ud83d\udd0d FEATURE IMPORTANCE ANALYSIS:\n----------------------------------------\n\ud83d\udcc8 TOP 10 MOST IMPORTANT FEATURES:\n  0.3319 - Initial_Stock_Level\n  0.1739 - Product_Age_Days\n  0.1183 - MRP_vs_Brand_Median\n  0.0794 - Lead_Time_Days\n  0.0699 - Historical_Demand_Mean_Brand_FC_ID\n  0.0685 - Log_MRP\n  0.0618 - DayOfWeek\n  0.0498 - Historical_Stock_Mean_Brand_FC_ID\n  0.0172 - Is_Mid_Week\n  0.0114 - Month\n\n\ud83c\udff7\ufe0f  KEY INSIGHTS:\n  \u2022 Product factors are important: Product_Age_Days, MRP_vs_Brand_Median, Historical_Demand_Mean_Brand_FC_ID\n  \u2022 Temporal factors are important: Product_Age_Days, Lead_Time_Days\n  \u2022 Historical factors are important: Historical_Demand_Mean_Brand_FC_ID\n\ud83d\udce4 Logged business summary to Azure Table Storage.\n\n======================================================================\n\ud83c\udf89 PIPELINE COMPLETED SUCCESSFULLY!\n======================================================================\n\u2705 Best Model: random_forest\n\u2705 Features: 19 (all leakage-free)\n\u2705 Ready for production pricing predictions\n======================================================================\n\n----------------------------- Captured stderr call -----------------------------\n[I 2025-06-19 11:22:33,821] A new study created in memory with name: no-name-5cf671cd-4a8b-41eb-8bac-b9faa0371416\n[I 2025-06-19 11:23:11,903] Trial 0 finished with value: 0.18365451234387098 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 226, &amp;#x27;max_depth&amp;#x27;: 6, &amp;#x27;learning_rate&amp;#x27;: 0.2605962878803946, &amp;#x27;subsample&amp;#x27;: 0.7807724501323772, &amp;#x27;colsample_bytree&amp;#x27;: 0.8831012697472442}. Best is trial 0 with value: 0.18365451234387098.\n[I 2025-06-19 11:23:45,709] A new study created in memory with name: no-name-d8c2069f-5b65-4425-9254-121c01c4cff5\n[I 2025-06-19 11:23:45,764] Trial 0 finished with value: 0.2229211683428231 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 270, &amp;#x27;max_depth&amp;#x27;: 3, &amp;#x27;learning_rate&amp;#x27;: 0.12956188224443854, &amp;#x27;num_leaves&amp;#x27;: 59, &amp;#x27;feature_fraction&amp;#x27;: 0.9409318104687441}. Best is trial 0 with value: 0.2229211683428231.\n[I 2025-06-19 11:23:45,784] A new study created in memory with name: no-name-c15f2cf7-b2b1-4b73-a0ed-e609dd23c522\n[I 2025-06-19 11:23:45,869] Trial 0 finished with value: 0.18899438014658715 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 78, &amp;#x27;max_depth&amp;#x27;: 5, &amp;#x27;min_samples_split&amp;#x27;: 6, &amp;#x27;min_samples_leaf&amp;#x27;: 1}. Best is trial 0 with value: 0.18899438014658715.\n2025/06/19 11:23:45 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:23:48 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;random_forest_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;28&amp;#x27; of model &amp;#x27;random_forest_dynamic_pricing&amp;#x27;.\n2025/06/19 11:23:48 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:23:51 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;xgboost_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;28&amp;#x27; of model &amp;#x27;xgboost_dynamic_pricing&amp;#x27;.\n2025/06/19 11:23:52 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.\n2025/06/19 11:23:55 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\nRegistered model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27; already exists. Creating a new version of this model...\nCreated version &amp;#x27;28&amp;#x27; of model &amp;#x27;lightgbm_dynamic_pricing&amp;#x27;.\n&#34;}], &#34;tests/test_evaluation_metrics.py::test_calculate_revenue_impact&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_evaluation_metrics.py::test_calculate_revenue_impact&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_evaluation_metrics.py::test_calculate_revenue_impact&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_evaluation_metrics.py::test_calculate_pricing_accuracy_metrics&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_evaluation_metrics.py::test_calculate_pricing_accuracy_metrics&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_evaluation_metrics.py::test_calculate_pricing_accuracy_metrics&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_evaluation_metrics.py::test_generate_business_report&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_evaluation_metrics.py::test_generate_business_report&#34;, &#34;duration&#34;: &#34;2 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_evaluation_metrics.py::test_generate_business_report&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;2 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_feature_engineering.py::test_advanced_feature_engineering&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_feature_engineering.py::test_advanced_feature_engineering&#34;, &#34;duration&#34;: &#34;52 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_feature_engineering.py::test_advanced_feature_engineering&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;52 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_feature_engineering.py::test_encode_categorical_features&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_feature_engineering.py::test_encode_categorical_features&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_feature_engineering.py::test_encode_categorical_features&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_feature_engineering.py::test_prepare_features_target&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_feature_engineering.py::test_prepare_features_target&#34;, &#34;duration&#34;: &#34;52 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_feature_engineering.py::test_prepare_features_target&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;52 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_feature_engineering.py::test_fit_transform&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_feature_engineering.py::test_fit_transform&#34;, &#34;duration&#34;: &#34;50 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_feature_engineering.py::test_fit_transform&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;50 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (10, 41)\n\u2713 Categorical features encoded. Shape: (10, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (10, 19)\n\u2713 Target shape: (10,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n&#34;}], &#34;tests/test_feature_engineering.py::test_transform&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_feature_engineering.py::test_transform&#34;, &#34;duration&#34;: &#34;99 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_feature_engineering.py::test_transform&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;99 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n============================================================\nLEAKAGE-FREE FEATURE ENGINEERING FOR SELLING PRICE\n============================================================\n\u2713 Core features created. Shape: (10, 41)\n\u2713 Categorical features encoded. Shape: (10, 43)\n\u2713 Final feature selection completed.\n\u2713 Feature matrix shape: (10, 19)\n\u2713 Target shape: (10,)\n\u2713 Selected features: 19\n\nSelected Features (Leakage-Free):\n   1. Log_MRP\n   2. MRP_Category\n   3. MRP_vs_Brand_Median\n   4. Is_Premium_Brand\n   5. Product_Age_Days\n   6. IsMetroMarket\n   7. Brand_encoded\n   8. Is_Peak_Season\n   9. Is_Summer\n  10. IsWeekend\n  11. Is_Mid_Week\n  12. Month\n  13. DayOfWeek\n  14. Is_New_Product\n  15. Is_Mature_Product\n  16. Lead_Time_Days\n  17. Initial_Stock_Level\n  18. Historical_Demand_Mean_Brand_FC_ID\n  19. Historical_Stock_Mean_Brand_FC_ID\n\n============================================================\nLEAKAGE CHECK PASSED - All features are available BEFORE pricing decision\n============================================================\n&#34;}], &#34;tests/test_mlflow_tracker.py::test_setup_experiment&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_mlflow_tracker.py::test_setup_experiment&#34;, &#34;duration&#34;: &#34;17 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_mlflow_tracker.py::test_setup_experiment&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;17 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_mlflow_tracker.py::test_log_feature_engineering_run&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_mlflow_tracker.py::test_log_feature_engineering_run&#34;, &#34;duration&#34;: &#34;12 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_mlflow_tracker.py::test_log_feature_engineering_run&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;12 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_mlflow_tracker.py::test_log_model_experiment&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_mlflow_tracker.py::test_log_model_experiment&#34;, &#34;duration&#34;: &#34;12 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_mlflow_tracker.py::test_log_model_experiment&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;12 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\u2713 Successfully logged xgboost model using specific flavor\n&#34;}], &#34;tests/test_mlflow_tracker.py::test_compare_model_runs&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_mlflow_tracker.py::test_compare_model_runs&#34;, &#34;duration&#34;: &#34;14 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_mlflow_tracker.py::test_compare_model_runs&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;14 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_mlflow_tracker.py::test_load_best_model&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_mlflow_tracker.py::test_load_best_model&#34;, &#34;duration&#34;: &#34;11 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_mlflow_tracker.py::test_load_best_model&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;11 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\u2713 Loaded model using MLflow pyfunc\n&#34;}], &#34;tests/test_model_train.py::test_setup_models&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_model_train.py::test_setup_models&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_model_train.py::test_setup_models&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_model_train.py::test_get_hyperparameter_space&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_model_train.py::test_get_hyperparameter_space&#34;, &#34;duration&#34;: &#34;0 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_model_train.py::test_get_hyperparameter_space&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;0 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_model_train.py::test_hyperparameter_tuning_optuna&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_model_train.py::test_hyperparameter_tuning_optuna&#34;, &#34;duration&#34;: &#34;00:00:26&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_model_train.py::test_hyperparameter_tuning_optuna&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:26&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stderr call -----------------------------\n[I 2025-06-19 11:23:56,302] A new study created in memory with name: no-name-f294ab20-d14b-436a-b0dd-aac46249261a\n[I 2025-06-19 11:24:22,609] Trial 0 finished with value: 0.4528002307143929 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 203, &amp;#x27;max_depth&amp;#x27;: 3, &amp;#x27;learning_rate&amp;#x27;: 0.1019490376274948, &amp;#x27;subsample&amp;#x27;: 0.7749889391882253, &amp;#x27;colsample_bytree&amp;#x27;: 0.7397204897557812}. Best is trial 0 with value: 0.4528002307143929.\n&#34;}], &#34;tests/test_model_train.py::test_cross_validate_models&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_model_train.py::test_cross_validate_models&#34;, &#34;duration&#34;: &#34;00:00:31&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_model_train.py::test_cross_validate_models&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:31&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nCross-validating random_forest...\nCross-validating xgboost...\nCross-validating lightgbm...\n&#34;}], &#34;tests/test_model_train.py::test_train_best_models&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_model_train.py::test_train_best_models&#34;, &#34;duration&#34;: &#34;00:01:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_model_train.py::test_train_best_models&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTuning hyperparameters for xgboost...\nTuning hyperparameters for lightgbm...\nTuning hyperparameters for random_forest...\n\n----------------------------- Captured stderr call -----------------------------\n[I 2025-06-19 11:24:53,898] A new study created in memory with name: no-name-a847fbeb-cad9-4a4b-9c21-5e5f739f8309\n[I 2025-06-19 11:25:36,597] Trial 0 finished with value: 0.006648009526994375 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 300, &amp;#x27;max_depth&amp;#x27;: 5, &amp;#x27;learning_rate&amp;#x27;: 0.10375294143039857, &amp;#x27;subsample&amp;#x27;: 0.9380461746892756, &amp;#x27;colsample_bytree&amp;#x27;: 0.8715589230262979}. Best is trial 0 with value: 0.006648009526994375.\n[I 2025-06-19 11:26:20,055] A new study created in memory with name: no-name-2e487890-8103-4085-8f8b-6d8ed17341ac\n[I 2025-06-19 11:26:20,088] Trial 0 finished with value: 0.587423831915026 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 277, &amp;#x27;max_depth&amp;#x27;: 3, &amp;#x27;learning_rate&amp;#x27;: 0.18731841648131337, &amp;#x27;num_leaves&amp;#x27;: 56, &amp;#x27;feature_fraction&amp;#x27;: 0.9844451331742851}. Best is trial 0 with value: 0.587423831915026.\n[I 2025-06-19 11:26:20,109] A new study created in memory with name: no-name-37ea5901-610c-4cf0-b32e-005caad9ae94\n[I 2025-06-19 11:26:20,346] Trial 0 finished with value: 1.735600964609314 and parameters: {&amp;#x27;n_estimators&amp;#x27;: 220, &amp;#x27;max_depth&amp;#x27;: 15, &amp;#x27;min_samples_split&amp;#x27;: 2, &amp;#x27;min_samples_leaf&amp;#x27;: 3}. Best is trial 0 with value: 1.735600964609314.\n&#34;}], &#34;tests/test_time_series.py::test_decompose_time_series&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_time_series.py::test_decompose_time_series&#34;, &#34;duration&#34;: &#34;8 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_time_series.py::test_decompose_time_series&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;8 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_time_series.py::test_detect_seasonality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_time_series.py::test_detect_seasonality&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_time_series.py::test_detect_seasonality&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_time_series.py::test_create_lag_features&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_time_series.py::test_create_lag_features&#34;, &#34;duration&#34;: &#34;14 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_time_series.py::test_create_lag_features&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;14 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_time_series.py::test_forecast_demand&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_time_series.py::test_forecast_demand&#34;, &#34;duration&#34;: &#34;10 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_time_series.py::test_forecast_demand&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;10 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;test_report.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>

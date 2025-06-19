@@ -8,8 +8,20 @@ import plotly.graph_objects as go
 import requests
 import streamlit as st
 
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
+
+from utils import get_secret_from_keyvault
+
+
 # Ensure log folder exists
 os.makedirs("logs", exist_ok=True)
+
+# Load environment variables
+vault_url = os.getenv("KEYVAULT_URL")
+if not vault_url:
+    st.error("Key Vault URL not found.")
+    st.stop()
 
 # Logging setup
 logging.basicConfig(
@@ -32,8 +44,7 @@ def generate_dummy_accuracy_log():
     df = pd.DataFrame({"date": dates, "accuracy": accuracies})
     return df
 
-
-API_URL1 = "http://localhost:8000/metrics/accuracy"  # Replace with deployed URL if needed
+API_URL1 = get_secret_from_keyvault(vault_url,"API-URL1")  # Replace with deployed URL if needed
 
 
 def display_accuracy_trend():
@@ -105,7 +116,7 @@ def display_accuracy_trend():
 display_accuracy_trend()
 st.markdown("---")
 
-API_URL = "http://localhost:8000/predict"  # Update with actual FastAPI URL
+API_URL = get_secret_from_keyvault(vault_url,"FASTAPI-URL")  # Replace with your FastAPI URL
 
 st.markdown("### 🧾 Product & Competitor Info")
 with st.form("prediction_form"):

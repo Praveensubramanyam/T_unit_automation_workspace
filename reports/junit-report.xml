@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="30" time="461.167" timestamp="2025-06-19T11:42:24.594008+00:00" hostname="TIGER05381"><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_load_and_preprocess_data" time="0.076" /><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_run_feature_engineering" time="0.866" /><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_run_time_series_analysis" time="0.028" /><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_prepare_model_data" time="0.087" /><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_run_ml_experiments" time="58.146"><failure message="ValueError: too many values to unpack (expected 2)">pipeline = &lt;src.pipeline.dynamic_pricing_pipeline.DynamicPricingPipeline object at 0x76a71e7e9d60&gt;
+mock_data =          Date       MRP_x   Brand FC_ID  SellingPrice  Demand  StockStart  IsMetro  LeadTimeFloat
+0  2023-01-01  164.4... 2023-04-10  108.024662  BrandB   FC2    163.398048       6          46        1       4.725104
+
+[100 rows x 9 columns]
+
+    def test_run_ml_experiments(pipeline, mock_data):
+        X, y, df_processed = pipeline.run_feature_engineering(mock_data)
+        X_train, X_val, X_test, y_train, y_val, y_test = pipeline.prepare_model_data(X, y)
+&gt;       best_model_name, directional_accuracy = pipeline.run_ml_experiments(X_train, X_val, X_test, y_train, y_val, y_test)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: too many values to unpack (expected 2)
+
+tests/test_dynamic_pricing_pipeline.py:53: ValueError</failure></testcase><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_generate_business_insights" time="105.065" /><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_predict_prices" time="60.884" /><testcase classname="tests.test_dynamic_pricing_pipeline" name="test_run_complete_pipeline" time="85.581"><failure message="assert None is not None">pipeline = &lt;src.pipeline.dynamic_pricing_pipeline.DynamicPricingPipeline object at 0x76a6fca06a20&gt;
+mock_data =          Date       MRP_x   Brand FC_ID  SellingPrice  Demand  StockStart  IsMetro  LeadTimeFloat
+0  2023-01-01  167.7... 2023-04-10  167.567326  BrandB   FC2     94.987866       1          44        0       1.052930
+
+[100 rows x 9 columns]
+
+    def test_run_complete_pipeline(pipeline, mock_data):
+        result = pipeline.run_complete_pipeline(mock_data)
+&gt;       assert result is not None
+E       assert None is not None
+
+tests/test_dynamic_pricing_pipeline.py:74: AssertionError</failure></testcase><testcase classname="tests.test_evaluation_metrics" name="test_calculate_revenue_impact" time="0.000" /><testcase classname="tests.test_evaluation_metrics" name="test_calculate_pricing_accuracy_metrics" time="0.001" /><testcase classname="tests.test_evaluation_metrics" name="test_generate_business_report" time="0.001" /><testcase classname="tests.test_feature_engineering" name="test_advanced_feature_engineering" time="0.032" /><testcase classname="tests.test_feature_engineering" name="test_encode_categorical_features" time="0.007" /><testcase classname="tests.test_feature_engineering" name="test_prepare_features_target" time="0.039" /><testcase classname="tests.test_feature_engineering" name="test_fit_transform" time="0.038" /><testcase classname="tests.test_feature_engineering" name="test_transform" time="0.055" /><testcase classname="tests.test_mlflow_tracker" name="test_setup_experiment" time="0.018" /><testcase classname="tests.test_mlflow_tracker" name="test_log_feature_engineering_run" time="0.020" /><testcase classname="tests.test_mlflow_tracker" name="test_log_model_experiment" time="0.045" /><testcase classname="tests.test_mlflow_tracker" name="test_compare_model_runs" time="0.015"><failure message="KeyError: 'status'">self = Index(['run_id', 'metrics.MAPE'], dtype='object'), key = 'status'
+
+    def get_loc(self, key):
+        """
+        Get integer location, slice or boolean mask for requested label.
+    
+        Parameters
+        ----------
+        key : label
+    
+        Returns
+        -------
+        int if unique index, slice if monotonic index, else mask
+    
+        Examples
+        --------
+        &gt;&gt;&gt; unique_index = pd.Index(list('abc'))
+        &gt;&gt;&gt; unique_index.get_loc('b')
+        1
+    
+        &gt;&gt;&gt; monotonic_index = pd.Index(list('abbc'))
+        &gt;&gt;&gt; monotonic_index.get_loc('b')
+        slice(1, 3, None)
+    
+        &gt;&gt;&gt; non_monotonic_index = pd.Index(list('abcb'))
+        &gt;&gt;&gt; non_monotonic_index.get_loc('b')
+        array([False,  True, False,  True])
+        """
+        casted_key = self._maybe_cast_indexer(key)
+        try:
+&gt;           return self._engine.get_loc(casted_key)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tpl/lib/python3.12/site-packages/pandas/core/indexes/base.py:3812: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+pandas/_libs/index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+    ???
+pandas/_libs/index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+    ???
+pandas/_libs/hashtable_class_helper.pxi:7088: in pandas._libs.hashtable.PyObjectHashTable.get_item
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   KeyError: 'status'
+
+pandas/_libs/hashtable_class_helper.pxi:7096: KeyError
+
+The above exception was the direct cause of the following exception:
+
+tracker = &lt;src.models.mlflow_tracker.MLflowPricingTracker object at 0x76a6fc991fa0&gt;
+
+    def test_compare_model_runs(tracker):
+        mock_runs_df = pd.DataFrame([
+            {"run_id": "123", "metrics.MAPE": 0.1},
+            {"run_id": "456", "metrics.MAPE": 0.2}
+        ])
+    
+        with patch("mlflow.get_experiment_by_name") as mock_get_exp, \
+             patch("mlflow.search_runs") as mock_search:
+            mock_get_exp.return_value = MagicMock(experiment_id="1")
+            mock_search.return_value = mock_runs_df
+    
+&gt;           result = tracker.compare_model_runs()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mlflow_tracker.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/models/mlflow_tracker.py:434: in compare_model_runs
+    (runs['status'] == 'FINISHED')
+     ^^^^^^^^^^^^^^
+tpl/lib/python3.12/site-packages/pandas/core/frame.py:4107: in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Index(['run_id', 'metrics.MAPE'], dtype='object'), key = 'status'
+
+    def get_loc(self, key):
+        """
+        Get integer location, slice or boolean mask for requested label.
+    
+        Parameters
+        ----------
+        key : label
+    
+        Returns
+        -------
+        int if unique index, slice if monotonic index, else mask
+    
+        Examples
+        --------
+        &gt;&gt;&gt; unique_index = pd.Index(list('abc'))
+        &gt;&gt;&gt; unique_index.get_loc('b')
+        1
+    
+        &gt;&gt;&gt; monotonic_index = pd.Index(list('abbc'))
+        &gt;&gt;&gt; monotonic_index.get_loc('b')
+        slice(1, 3, None)
+    
+        &gt;&gt;&gt; non_monotonic_index = pd.Index(list('abcb'))
+        &gt;&gt;&gt; non_monotonic_index.get_loc('b')
+        array([False,  True, False,  True])
+        """
+        casted_key = self._maybe_cast_indexer(key)
+        try:
+            return self._engine.get_loc(casted_key)
+        except KeyError as err:
+            if isinstance(casted_key, slice) or (
+                isinstance(casted_key, abc.Iterable)
+                and any(isinstance(x, slice) for x in casted_key)
+            ):
+                raise InvalidIndexError(key)
+&gt;           raise KeyError(key) from err
+E           KeyError: 'status'
+
+tpl/lib/python3.12/site-packages/pandas/core/indexes/base.py:3819: KeyError</failure></testcase><testcase classname="tests.test_mlflow_tracker" name="test_load_best_model" time="0.016" /><testcase classname="tests.test_model_train" name="test_setup_models" time="0.000" /><testcase classname="tests.test_model_train" name="test_get_hyperparameter_space" time="0.000" /><testcase classname="tests.test_model_train" name="test_hyperparameter_tuning_optuna" time="34.919" /><testcase classname="tests.test_model_train" name="test_cross_validate_models" time="34.207" /><testcase classname="tests.test_model_train" name="test_train_best_models" time="70.099" /><testcase classname="tests.test_time_series" name="test_decompose_time_series" time="0.005" /><testcase classname="tests.test_time_series" name="test_detect_seasonality" time="0.002" /><testcase classname="tests.test_time_series" name="test_create_lag_features" time="0.004" /><testcase classname="tests.test_time_series" name="test_forecast_demand" time="0.032" /></testsuite></testsuites>

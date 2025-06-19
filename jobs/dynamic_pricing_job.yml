@@ -1,8 +1,8 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 command: >
-  python -u src/main.py
-code: ../
+  python main.py
+code: ../pricing
 environment: azureml:dynamic-pricing-env:2
 compute: azureml:tunit-ci
 experiment_name: dynamic_pricing_ci_cd

@@ -35,5 +35,5 @@ jobs:
         run: |
           az account set --subscription $AZURE_SUBSCRIPTION_ID
           az configure --defaults group=$AZURE_RESOURCE_GROUP workspace=$AZURE_ML_WORKSPACE
-          az ml job create --file jobs/dynamic_pricing_job.yml\ 
+          az ml job create --file ./jobs/dynamic_pricing_job.yml\ 
           --set environment_variables.BLOB_CONNECTION_STRING=$BLOB_CONNECTION_STRING

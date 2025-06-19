@@ -3,11 +3,6 @@ import uuid
 from datetime import datetime
 
 import dotenv
-import mlflow
-import mlflow.catboost
-import mlflow.lightgbm
-import mlflow.sklearn
-import mlflow.xgboost
 import numpy as np
 import pandas as pd
 from azure.data.tables import TableServiceClient

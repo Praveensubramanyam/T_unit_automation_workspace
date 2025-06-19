@@ -5,7 +5,6 @@ code: .
 environment:
   build:
     path: conda
-    conda_file: conda/env.yml
 compute: azureml:tunitfeatureeng # Replace with your cluster name
 experiment_name: dynamic_pricing_ci_cd
 display_name: Run Dynamic Pricing Pipeline

@@ -3,7 +3,7 @@ type: command
 command: >
   python src/main.py
 code: .
-environment: azureml://locations/centralindia/workspaces/0efb6dad-4b9a-4ca0-8d8b-7922011ceb16/environments/dynamic-pricing-env/versions/2
+environment: azureml:dynamic-pricing-env:2
 compute: azureml:tunitfeatureeng # Replace with your cluster name
 experiment_name: dynamic_pricing_ci_cd
 display_name: Run Dynamic Pricing Pipeline

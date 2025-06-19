@@ -4,7 +4,7 @@ command: >
   python -u main.py
 code: ../pricing
 environment: azureml:dynamic-pricing-env:3
-compute: azureml:tunit-ci
+compute: azureml:tunit-ci-instance
 experiment_name: dynamic_pricing_ci_cd
 display_name: Run Dynamic Pricing Pipeline
 description: Submit main pipeline from GitHub to Azure ML

@@ -1,10 +1,11 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+type: command
 command: >
   python src/main.py
 code: .
 environment:
   build:
-    path: conda
+    path: ../conda
 compute: azureml:tunitfeatureeng # Replace with your cluster name
 experiment_name: dynamic_pricing_ci_cd
 display_name: Run Dynamic Pricing Pipeline

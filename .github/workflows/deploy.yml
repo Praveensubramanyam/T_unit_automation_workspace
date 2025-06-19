@@ -2,7 +2,7 @@ name: Deploy to Azure ML Studio
 
 on:
   push:
-    branches: [main, prod]
+    branches: [main, prod,enh/ci_cd]
 
 jobs:
   deploy:

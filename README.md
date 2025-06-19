@@ -1,87 +1,224 @@
-# dynamic-pricing-tide
 
-This project implements a dynamic pricing model using machine learning techniques. The structure of the project is organized into several directories, each serving a specific purpose.
+# 🚀 Tide Dynamic Pricing Optimization System
 
-## Project Structure
+[![Azure ML](https://img.shields.io/badge/AzureML-Deployed-blue?logo=microsoftazure)](https://azure.microsoft.com/)
+[![MLflow Tracking](https://img.shields.io/badge/MLflow-Tracking-success?logo=mlflow)](https://mlflow.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-- **data/**: Contains raw and processed datasets.
-  - **raw/**: Stores raw datasets.
-  - **processed/**: Stores processed datasets.
+## 📌 Project Overview
 
-- **notebooks/**: Contains Jupyter Notebooks for exploration.
-  - **01_data_exploration.ipynb**: Used for exploratory data analysis.
+This project implements a dynamic pricing engine for Tide detergent, powered by machine learning. It leverages behavioral analytics, inventory status, competitor pricing, and customer demand to optimize price recommendations. The solution includes real-time APIs, automated pipelines, retraining logic, and full observability via Azure ML and MLflow.
 
-- **src/**: Contains the core source code.
-  - **config/**: Contains configurations and constants.
-    - **settings.py**: Configuration settings for the project.
-  - **data/**: Handles data loading and preprocessing.
-    - **preprocess.py**: Functions for loading and preprocessing datasets.
-  - **features/**: Responsible for feature engineering.
-    - **feature_builder.py**: Functions for creating features from the dataset.
-  - **models/**: For model training and evaluation.
-    - **train.py**: Functions for training machine learning models.
-    - **evaluate.py**: Functions for evaluating the performance of trained models.
-  - **monitor/**: For drift detection and logging.
-    - **monitor.py**: Functions for monitoring model performance and detecting data drift.
-  - **utils/**: Contains utility functions.
-    - **logger.py**: Functions for logging information and errors.
-    - **validators.py**: Validation functions for input data.
+---
 
-- **api/**: Contains the backend API built with FastAPI.
-  - **main.py**: Entry point for the FastAPI application.
-  - **routers/**: Contains API route definitions.
-    - **pricing.py**: Defines routes related to pricing.
+## 🧱 Project Structure
 
-- **frontend/**: Contains the frontend application.
-  - **streamlit_app.py**: Main entry point for the Streamlit application.
+```
+.
+├── api/                      # FastAPI backend for serving ML models
+├── conda/                   # Conda environment definition for Azure ML
+├── data/                    # Data ingestion scripts
+├── frontend/                # Streamlit UI for pricing visualization
+├── jobs/                    # YAML-based Azure ML job definitions
+├── mlruns/                  # MLflow experiment tracking logs
+├── notebooks/               # Jupyter notebooks for data exploration
+├── src/                     # Core codebase
+│   ├── config/              # App and environment settings
+│   ├── data/                # Preprocessing logic
+│   ├── evaluation/          # Custom evaluation metrics
+│   ├── features/            # Feature engineering & time series
+│   ├── models/              # Model training & MLflow tracking
+│   ├── pipeline/            # Orchestration & ML pipeline script
+│   ├── utils/               # Validators, setup utilities, helpers
+├── tests/                   # Unit and integration tests
+├── workflows/               # CI/CD GitHub Actions pipeline
+├── project_setup.py         # Project initialization script
+├── azure_ml_deployment.py   # Managed endpoint deployment logic
+├── automated_retraining.py  # Retraining pipeline with triggers
+├── monitoring_system.py     # App Insights + model drift monitoring
+├── README.md
+```
 
-- **.github/**: Contains GitHub-related files.
-  - **workflows/**: Contains CI/CD workflow configurations.
-    - **ci_cd_pipeline.yml**: Defines the GitHub Actions CI/CD pipeline.
+---
 
-- **tests/**: Contains unit and integration tests.
-  - **test_preprocessing.py**: Tests for the preprocessing functions.
-  - **test_api.py**: Tests for the API endpoints.
+## 🔧 Setup Instructions
 
-- **requirements.txt**: Lists the Python dependencies required for the project.
+### 1. Clone & Install
 
-- **.env**: Used for local environment variables.
+```bash
+git clone https://github.com/your-org/dynamic-pricing-tide.git
+cd dynamic-pricing-tide
+pip install -r requirements.txt
+```
 
-- **.gitignore**: Specifies files and directories to be ignored by Git.
+### 2. Initialize Project
 
-## Installation
+```bash
+python src/project_setup.py
+```
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/dynamic-pricing-tide.git
-   cd dynamic-pricing-tide
-   ```
+Sets up:
+- Folder structure
+- Azure Key Vault access
+- MLflow experiment logging
+- JSON-structured logging via Azure App Insights
 
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+---
 
-3. Set up your environment variables in the `.env` file.
+## ⚙️ Running the Application
 
-## Usage
+### 🧠 Train Model
 
-- To run the API, navigate to the `api` directory and execute:
-  ```
-  uvicorn main:app --reload
-  ```
+```bash
+python src/main.py
+```
 
-- To run the frontend application, execute:
-  ```
-  streamlit run streamlit_app.py
-  ```
+### 🧪 Serve via API
 
-- For data exploration, open the Jupyter Notebook in the `notebooks` directory.
+```bash
+cd api
+uvicorn main:app --reload
+```
 
-## Contributing
+### 🎛️ Run Streamlit UI
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+```bash
+cd frontend
+streamlit run streamlit_app.py
+```
 
-## License
+---
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## 📈 ML Workflow Highlights
+
+- **MLflow Tracking**: Experiments auto-logged with parameters, metrics, and artifacts.
+- **Model Tuning**: GridSearchCV over multiple models: RandomForest, XGBoost, Ridge, Lasso, SVR.
+- **Feature Engineering**:
+  - Price Elasticity Proxy
+  - Customer Journey Signals
+  - Inventory Analytics (FillRate, Backorders, Stockouts)
+  - Time Series Decomposition (via STL)
+
+---
+
+## 🧪 Testing & Quality
+
+```bash
+pytest tests/
+```
+
+Tests include:
+- Unit tests for preprocessing and API logic
+- Integration test for model prediction pipeline
+- Smoke test for endpoint health
+
+---
+
+## 📦 Deployment Pipeline
+
+- **Azure ML** for model packaging and deployment
+- **Blue-Green Deployment** strategy using managed endpoints
+- **Rollback logic** based on App Insights and MLflow performance comparison
+
+Run deployment:
+
+```bash
+python azure_ml_deployment.py
+```
+
+---
+
+## 🔄 Retraining Logic
+
+- Scheduled + Drift + Performance Degradation triggers
+- Champion-Challenger with A/B testing
+- MLflow-driven model promotion and rollback
+- Business impact checks before promotion
+
+Trigger:
+
+```bash
+python automated_retraining.py
+```
+
+---
+
+## 📊 Monitoring (via Azure App Insights)
+
+Tracked:
+- Revenue impact
+- Demand forecast error
+- Pricing accuracy
+- Customer churn proxy
+- Latency, error rates, throughput
+- Alerting severity levels (warnings, critical)
+
+Run:
+
+```bash
+python monitoring_system.py
+```
+
+---
+
+## 🧬 API Reference
+
+**POST** `/predict`
+
+```json
+{
+  "Date": "2025-06-14",
+  "SellingPrice": 58.5,
+  "Brand": "Tide",
+  "Demand": 120
+}
+```
+
+Returns:
+
+```json
+{
+  "PredictedUnitsSold": 135
+}
+```
+
+---
+
+## 📖 Documentation Coverage
+
+- ✅ Architecture diagram (see above)
+- ✅ Setup, configuration, and `.env` usage
+- ✅ User manual: run training, APIs, UI
+- ✅ Dev manual: folder structure, test strategy, CI/CD
+- ✅ Monitoring and retraining ops
+- ✅ ML model lifecycle flow
+- ✅ Licensing and contribution guide
+
+---
+
+## 👩‍💻 Contributing
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit + test + lint
+4. Open a PR with clear title + description
+
+---
+
+## 📄 License
+
+Licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤖 Copilot Assistance
+
+This project was developed with GitHub Copilot assistance for:
+
+- Folder structure generation
+- Boilerplate scaffolding
+- ML pipeline construction
+- Logging and monitoring integrations
+- Documentation generation
+
+---

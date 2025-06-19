@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 tunit_dev
+.vscode
 
 # C extensions
 *.so

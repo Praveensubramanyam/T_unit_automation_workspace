@@ -266,105 +266,103 @@ class DynamicPricingPipeline:
 
         return X_train_final, X_val, X_test, y_train_final, y_val, y_test
 
-    def run_ml_experiments(
-        self, X_train, X_val, X_test, y_train, y_val, y_test
-    ):
+    def run_ml_experiments(self, X_train, X_val, X_test, y_train, y_val, y_test):
         """Run comprehensive ML experiments"""
-        print("\n" + "=" * 50)
+        print("\n" + "="*50)
         print("ML EXPERIMENTATION PHASE")
-        print("=" * 50)
-
+        print("="*50)
+        
         # Train models with hyperparameter tuning
         print("🚀 Starting model training with hyperparameter optimization...")
         self.ml_framework.train_best_models(X_train, y_train, X_val, y_val)
         print("✓ Model training completed")
-
+        
         # Evaluate all models
         best_model_name = None
-        best_mape = float("inf")
-
+        best_mape = float('inf')
+        
         print("\n📊 MODEL EVALUATION RESULTS:")
         print("-" * 50)
-
+        tag_list = []
         for model_name, model in self.ml_framework.models.items():
             if model is None:
                 print(f"❌ {model_name}: Training failed")
                 continue
-
+                
             print(f"\n🔍 Evaluating {model_name}...")
-
+           
             try:
+                exp_models = {} 
                 # Make predictions
                 y_pred_val = model.predict(X_val)
                 y_pred_test = model.predict(X_test)
-
+                
                 # Calculate metrics
-                val_metrics = (
-                    self.evaluator.calculate_pricing_accuracy_metrics(
-                        y_val, y_pred_val
-                    )
-                )
-                test_metrics = (
-                    self.evaluator.calculate_pricing_accuracy_metrics(
-                        y_test, y_pred_test
-                    )
-                )
-
+                val_metrics = self.evaluator.calculate_pricing_accuracy_metrics(y_val, y_pred_val)
+                test_metrics = self.evaluator.calculate_pricing_accuracy_metrics(y_test, y_pred_test)
+                
                 print(f"  📈 Validation MAPE: {val_metrics['MAPE']:.3f}")
                 print(f"  📈 Test MAPE: {test_metrics['MAPE']:.3f}")
                 print(f"  📈 Test R²: {test_metrics['R2']:.3f}")
                 print(f"  📈 Test RMSE: {test_metrics.get('RMSE', 'N/A')}")
-
+                
                 # Track best model
-                if test_metrics["MAPE"] < best_mape:
-                    best_mape = test_metrics["MAPE"]
+                if test_metrics['MAPE'] < best_mape:
+                    best_mape = test_metrics['MAPE']
                     best_model_name = model_name
                     self.best_model = model
 
-                directional_accuracy = test_metrics.get(
-                    "Directional_Accuracy", 0
-                )
-
+                directional_accuracy = test_metrics.get('Directional_Accuracy', 0)
+                
                 # Prepare metrics for MLflow logging
                 combined_metrics = {
-                    "validation_MAPE": val_metrics["MAPE"],
-                    "validation_R2": val_metrics["R2"],
-                    "test_MAPE": test_metrics["MAPE"],
-                    "test_R2": test_metrics["R2"],
-                    "test_RMSE": test_metrics.get("RMSE", 0),
-                    "directional_accuracy": test_metrics.get(
-                        "Directional_Accuracy", 0
-                    ),
+                    'validation_MAPE': val_metrics['MAPE'],
+                    'validation_R2': val_metrics['R2'],
+                    'test_MAPE': test_metrics['MAPE'],
+                    'test_R2': test_metrics['R2'],
+                    'test_RMSE': test_metrics.get('RMSE', 0),
+                    'directional_accuracy': test_metrics.get('Directional_Accuracy', 0)
                 }
-
+                
                 # Get model parameters
-                model_params = self.ml_framework.best_params.get(
-                    model_name, {}
-                )
+                model_params = self.ml_framework.best_params.get(model_name, {})
 
                 # Log to MLflow
-                feature_importance = self.ml_framework.feature_importance.get(
-                    model_name, None
-                )
-                self.mlflow_tracker.log_model_experiment(
-                    model=model,
-                    model_name=model_name,
-                    params=model_params,
-                    metrics=combined_metrics,
-                    feature_importance=feature_importance,
-                )
+                feature_importance = self.ml_framework.feature_importance.get(model_name, None)
 
+                exp_models['model']=model
+                exp_models['model_name']=model_name
+                exp_models['params'] = model_params
+                exp_models['metrics']= combined_metrics
+                exp_models['feature_importance'] = feature_importance
+
+                tag_list.append(exp_models)
+                print(tag_list[-1]['model_name'])
             except Exception as e:
                 print(f"❌ Error evaluating {model_name}: {e}")
                 continue
-
+                
         if best_model_name:
             print(f"\n🏆 BEST MODEL: {best_model_name}")
             print(f"🎯 Best Test MAPE: {best_mape:.3f}")
+
+            # Get the best model instance
+            best_model = self.ml_framework.models[best_model_name]
+            for i in tag_list:
+                if i['model_name'] == best_model_name:
+                    self.mlflow_tracker.log_model_experiment(
+                            model=i['model'],
+                             model_name=i['model_name'],
+                             params=i['params'],
+                             metrics=i['metrics'],
+                             feature_importance=i['feature_importance']
+                        )
+                else:
+                    continue
         else:
             print("\n❌ No models were successfully trained!")
-
-        return best_model_name, directional_accuracy
+            
+        return best_model_name
 
     def generate_business_insights(
         self, X_test, y_test, model_name, directional_accuracy
